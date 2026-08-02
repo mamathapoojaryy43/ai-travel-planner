@@ -1,0 +1,102 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Soft Light Pink Theme Tokens */
+    --background: 330 60% 99%; /* #FFF5FA */
+    --foreground: 215 28% 17%; /* #1F2937 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    --primary: 330 81% 60%; /* #EC4899 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 79% 71%; /* #F472B6 */
+    --secondary-foreground: 215 28% 17%;
+    --muted: 330 30% 96%; /* #FCE7F3 */
+    --muted-foreground: 215 16% 47%; /* #6B7280 */
+    --accent: 330 70% 50%; /* #DB2777 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 330 40% 92%;
+    --input: 330 40% 92%;
+    --ring: 330 81% 60%;
+    --radius: 1.25rem;
+  }
+
+  .dark {
+    /* Dark Mode Pink Accents Tokens */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 7%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 7%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 79% 71%;
+    --secondary-foreground: 213 31% 91%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 330 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 330 81% 60%;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 245, 250, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dark .glass-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .gradient-text-soft {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .pink-gradient-button {
+    background: linear-gradient(135deg, #ec4899 0%, #e11d48 50%, #db2777 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.35);
+  }
+
+  .pink-gradient-button:hover {
+    box-shadow: 0 15px 30px -5px rgba(236, 72, 153, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.45);
+}
